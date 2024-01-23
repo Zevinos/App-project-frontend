@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import rawgApi from '../api/rawgApi'
-import myApi from '../api/myApi'
+import rawgApi from '../../api/rawgApi'
+import myApi from '../../api/myApi'
+import './OneGamePage.css'
 function OneGamePage() {
     const params = useParams()
     const [game, setGame] = useState(null)
@@ -35,8 +36,12 @@ function OneGamePage() {
   return (
     <div>
     <div>OneGamePage</div>
+    <img src={game.background_image} alt=""  />
     <h2>{game.name}</h2>
+    <p>{game.released}</p>
     <p>{isFav ? 'Is favorite' : 'Not favorite'}</p>
+    <button> Add to Favorite</button>
+    
 
     </div>
   )

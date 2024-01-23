@@ -1,0 +1,10 @@
+.GameImg{
+    display: flex;
+    width: 350px;
+    height: 300px;
+    background-color: black;
+}
+.Card{
+    background-color: black;
+    color: white;
+}

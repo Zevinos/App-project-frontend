@@ -1,0 +1,21 @@
+.SearchBar{
+    display: flex;
+    background: whitesmoke;
+    padding: 10px;
+    width: 100%;
+    
+    border-radius: 100%;
+    
+}
+.Bar{
+    display: flex;
+    align-items: center;
+}
+.Logo{
+    width: 60px;
+    height: 60px;
+}
+input {
+    background: transparent;
+    outline: none;
+}

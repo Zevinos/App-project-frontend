@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import rawgApi from "../api/rawgApi";
+import rawgApi from "../../api/rawgApi";
 import { Link } from "react-router-dom";
-import myApi from "../api/myApi";
-
+import myApi from "../../api/myApi";
+import NavBar from "../../components/Navbar/NavBar";
 
 function HomePage() {
 
@@ -31,12 +31,13 @@ function HomePage() {
   return (
     <div>
       <h1>Home Page</h1>
+      
       <ul>
       {games.map((game) => {
-        return <li key={game.id}>
+        return <li key={game.id} className="Card">
+          <img src={game.background_image} alt="" className="GameImg" />
           <p>Game: <Link to={`/games/${game.id}`}>{game.name}</Link></p>
-          <img src={game.background_image} alt="" />
-
+          <p>{game.released}</p>
         </li>
 })}
       </ul>
