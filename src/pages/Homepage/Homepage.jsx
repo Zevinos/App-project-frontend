@@ -3,7 +3,7 @@ import rawgApi from "../../api/rawgApi";
 import { Link } from "react-router-dom";
 import myApi from "../../api/myApi";
 import NavBar from "../../components/Navbar/NavBar";
-
+import "./HomePage.css";
 function HomePage() {
   const [games, setGames] = useState(null);
 
@@ -14,6 +14,7 @@ function HomePage() {
       console.log(response);
       //setGames(response.data.results)
       setGames(response.data);
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
