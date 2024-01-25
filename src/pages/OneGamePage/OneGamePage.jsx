@@ -71,7 +71,7 @@ function OneGamePage() {
 
   return (
     <div>
-      <div>OneGamePage</div>
+      <h1>OneGamePage</h1>
       <img src={game.background_image} alt="" />
       <h2>{game.name}</h2>
       <p>{game.description}</p>
