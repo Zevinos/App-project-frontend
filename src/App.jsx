@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import OneGamePage from "./pages/OnegamePage/OneGamePage";
+import OneGamePage from "./pages/OneGbrljrbhlramePage/OneGamePage";
 import Aboutpage from "./pages/AboutPage/AboutPage/";
 import NavBar from "./components/Navbar/NavBar";
 import NewGamePage from "./pages/NewGamePage/NewGamePage";
