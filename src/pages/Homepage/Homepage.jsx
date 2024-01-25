@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import rawgApi from "../../api/rawgApi";
+//import rawgApi from "../../api/rawgApi";
 import { Link } from "react-router-dom";
 import myApi from "../../api/myApi";
-import NavBar from "../../components/Navbar/NavBar";
+//import NavBar from "../../components/Navbar/NavBar";
 import "./HomePage.css";
 function HomePage() {
   const [games, setGames] = useState(null);

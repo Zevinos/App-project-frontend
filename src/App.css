@@ -11,3 +11,7 @@
   color: white;
   margin: 10px;
 }
+
+body {
+  display: grid;
+}

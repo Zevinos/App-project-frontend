@@ -18,9 +18,11 @@ function NewGamePage() {
   const [name, setName] = useState("");
   const [released, setReleased] = useState("");
   const [background_image, setbackground_Image] = useState("");
+  const [description, setDescription] = useState("");
   const navigate = useNavigate();
 
   const handleName = (event) => setName(event.target.value);
+  const handleDescription = (event) => setDescription(event.target.value);
   const handleReleased = (event) => setReleased(event.target.value);
   const handleBackground_Image = (event) =>
     setbackground_Image(event.target.value);
@@ -32,12 +34,13 @@ function NewGamePage() {
         name: name,
         released: released,
         background_image: background_image,
+        description: description,
       };
       const response = await myApi.post(`/games`, newGame);
       console.log(response);
       navigate(`/games/${response.data.id}`);
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   }
 
@@ -54,6 +57,17 @@ function NewGamePage() {
           id="released"
           value={released}
           onChange={handleReleased}
+        />
+      </div>
+      <div>
+        <label htmlFor="description"> Game description:</label>
+        <input
+          type="text"
+          id="description"
+          value={description}
+          cols="30"
+          rows="10"
+          onChange={handleDescription}
         />
       </div>
       <div>
