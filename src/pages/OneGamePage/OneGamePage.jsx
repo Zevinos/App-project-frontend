@@ -4,6 +4,7 @@ import rawgApi from "../../api/rawgApi";
 import myApi from "../../api/myApi";
 import "./OneGamePage.css";
 import { useNavigate } from "react-router-dom";
+import { HiHeart, HiOutlineHeart } from "react-icons/hi2";
 
 function OneGamePage() {
   const params = useParams();
@@ -78,9 +79,9 @@ function OneGamePage() {
       <p>{isFav ? "Is favorite" : "Not favorite"}</p>
 
       {isFav ? (
-        <button onClick={handleDeleteFav}> Delete from Favorite</button>
+        <HiHeart onClick={handleDeleteFav} />
       ) : (
-        <button onClick={handleSubmit}> Add to Favorite</button>
+        <HiOutlineHeart onClick={handleSubmit} />
       )}
 
       <button onClick={handleDelete}>Delete Game</button>
@@ -89,10 +90,3 @@ function OneGamePage() {
 }
 
 export default OneGamePage;
-/*avoir un bouton delete favorite 
-*faire en sorte que le bouton add disparaisse quand le jeu est add et 
-faire en sorte que le bouton delete soit invisible lorsque le jeu est dans les favoris 
-*
-*
-*
-*/
