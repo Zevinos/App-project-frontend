@@ -1,9 +1,8 @@
-
-
-body{
+body {
   margin: 0;
-  background-color: #131A37;
+  background-color: #131a37;
+  background-image: url("/BACKGROUND.png");
 }
-.Navbar{ margin: 0;
+.Navbar {
+  margin: 0;
 }
-

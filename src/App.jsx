@@ -8,28 +8,26 @@ import NavBar from "./components/Navbar/NavBar";
 import NewGamePage from "./pages/NewGamePage/NewGamePage";
 import FavouritesPage from "./pages/FavouritesPage/FavouritesPage";
 import Footer from "./components/Footer/Footer";
-import Background from '../src/assets/Images/BACKGROUND.png'
+
 function App() {
   return (
-    
     <section className="App">
-
       <div>
-      <NavBar />
+        <NavBar />
       </div>
       <div className="CardList">
-      <Routes>
-        <Route path="/favorite" element={<FavouritesPage />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="/games/:gameId" element={<OneGamePage />} />
-        <Route path="/about" element={<Aboutpage />} />
-        <Route path="/new-game" element={<NewGamePage />} />
-      </Routes></div>
+        <Routes>
+          <Route path="/favorite" element={<FavouritesPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/games/:gameId" element={<OneGamePage />} />
+          <Route path="/about" element={<Aboutpage />} />
+          <Route path="/new-game" element={<NewGamePage />} />
+        </Routes>
+      </div>
       <div className="Footer">
-      <Footer />
+        <Footer />
       </div>
     </section>
-    
   );
 }
 

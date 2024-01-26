@@ -1,14 +1,16 @@
-.one-game-page-container{
+.one-game-page-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 900px;
-  background-color:#1E225A ;
+  background-color: #1e225a;
   padding: 20px;
   border-radius: 20px;
   color: #fff;
   justify-content: center;
   align-items: center;
+  margin-bottom: 150px;
+  margin-left: 300px;
 }
 
 .delete-button {
@@ -26,7 +28,20 @@
   align-items: center;
   justify-content: center;
   max-width: 30%;
+  margin-left: 300px;
 }
-.first-image{
-  max-width: 90%;
+.first-image {
+  max-width: 100%;
+}
+h1 {
+  font-weight: 300px;
+}
+.like {
+  display: flex;
+  flex-direction: row;
+}
+.Heart {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 20px;
 }

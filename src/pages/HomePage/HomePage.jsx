@@ -43,7 +43,7 @@ function HomePage() {
 
                   <p className="Invisible">.</p>
 
-                  <p className="date">{game.released} pc</p>
+                  <p className="date">{game.released} PC</p>
                 </div>
               </li>
             </Link>

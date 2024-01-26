@@ -1,0 +1,32 @@
+.FavCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e225a;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 300px;
+  margin: 2px;
+  float: left;
+  color: white;
+  margin: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+  margin-inline: 60px;
+}
+.favCard:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+}
+
+.GameImage {
+  height: 60%;
+}
+
+.TopCard {
+  width: 100%;
+}
+.BottomCard {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-bottom: 0;
+}

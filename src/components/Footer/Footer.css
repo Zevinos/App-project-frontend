@@ -1,20 +1,27 @@
-
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0; /* Add this line to remove the default margin of the body element */
 }
 
 .Footer {
-  background: linear-gradient(276.33deg, #1e225a 29.07%, #1c1f51 29.07%, #161737 71.33%);
+  background: linear-gradient(
+    276.33deg,
+    #1e225a 29.07%,
+    #1c1f51 29.07%,
+    #161737 71.33%
+  );
   text-align: center;
-  padding: 20px;
-  margin-bottom: auto; 
+  padding: 0;
+  margin-bottom: 0;
   width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  bottom: 0;
 }
 
 .GitLogo {

@@ -51,3 +51,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+.date {
+  word-spacing: 70px;
+  font-weight: 900;
+}

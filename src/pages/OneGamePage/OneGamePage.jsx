@@ -72,22 +72,24 @@ function OneGamePage() {
   return (
     <div className="one-game-page-container">
       <div className="form">
-      <img src={game.background_image} alt=""  className="first-image"/>
-      <h1>{game.name}</h1>
-      <div className="game-details">
- 
-    <p>{game.description}</p>
-      <p>{game.released}</p>
-    <p>{isFav ? "Added to Favorite" : "Add to favorite"}</p>
-
-      {isFav ? (
-        <HiHeart onClick={handleDeleteFav} />
-        ) : (
-          <HiOutlineHeart onClick={handleSubmit} />
-          ) }
-
-          </div >
-      <button className="delete-button" onClick={handleDelete}>Delete Game</button>
+        <img src={game.background_image} alt="" className="first-image" />
+        <h1>{game.name}</h1>
+        <h2>created by riot in {game.released}</h2>
+        <div className="game-details">
+          <h2>Description :</h2>
+          <p>{game.description}</p>
+        </div>
+        <div className="like">
+          {isFav ? (
+            <HiHeart onClick={handleDeleteFav} className="Heart" />
+          ) : (
+            <HiOutlineHeart onClick={handleSubmit} className="Heart" />
+          )}
+          <p>{isFav ? "Added to Favorite" : "Add to favorite"}</p>
+          <button className="delete-button" onClick={handleDelete}>
+            Delete Game
+          </button>
+        </div>
       </div>
     </div>
   );

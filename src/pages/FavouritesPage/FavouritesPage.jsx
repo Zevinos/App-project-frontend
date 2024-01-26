@@ -1,29 +1,59 @@
 import myApi from "../../api/myApi";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./FavouritesPage.css";
 
 function FavouritesPage() {
-  const params = useParams();
-  const [game, setGame] = useState(null);
+  const [games, setGames] = useState(null);
 
-  async function fetchOneGame() {
+  async function fetchFavorites() {
     try {
-      const response = await myApi.get(`/favourites/${isFav.id}`);
+      const { data } = await myApi.get(`/favourites`);
+      /**
+       * [{gameId}]
+       */
+      let allFavGames = [];
+      for (const fav of data) {
+        const response = await myApi.get(`/games/${fav.gameId}`);
+        allFavGames.push(response.data);
+      }
+      setGames(allFavGames);
+
       console.log(response);
-      setGame(response.data);
     } catch (error) {
       console.log(error);
     }
   }
   useEffect(() => {
-    fetchOneGame();
+    fetchFavorites();
   }, []);
+
+  if (!games) return <p className="Loading">Loading</p>;
 
   return (
     <div>
-      <p>Favorites</p>
-      <div>
-        <p>hey</p>
+      <div className="FavContainer">
+        <ul>
+          {games.map((game) => {
+            return (
+              <Link to={`/games/${game.id}`}>
+                <li key={game.id} className="FavCard">
+                  <div className="TopCard">
+                    <img
+                      src={game.background_image}
+                      alt=""
+                      className="GameImage"
+                    />
+                  </div>
+                  <div className="BottomhCard">
+                    <h2>{game.name}</h2>
+                  </div>
+                </li>
+              </Link>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
