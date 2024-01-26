@@ -27,30 +27,25 @@ function HomePage() {
   if (!games) return <p>Loading...</p>;
   return (
     <div className="Container">
-      
-      
-
       <ul>
         {games.map((game) => {
-          return (<Link to={`/games/${game.id}`}>
-      
-            <li key={game.id} className="Card">
-              <div className="LeftCard">
-              <img src={game.background_image} alt="" className="GameImg" />
-              </div>
-              <div className="RigthCard">
-              <h2>
-                 {game.name}
-              </h2>
-              <p className="Invisible">.</p>
-              <p className="Invisible">.</p>
-              <p className="Invisible">.</p>
-              
-              <p className="Invisible">.</p>
-              
-              <p className="date">{game.released}</p>
-              </div>
-            </li>
+          return (
+            <Link to={`/games/${game.id}`}>
+              <li key={game.id} className="Card">
+                <div className="LeftCard">
+                  <img src={game.background_image} alt="" className="GameImg" />
+                </div>
+                <div className="RigthCard">
+                  <h2>{game.name}</h2>
+                  <p className="Invisible">.</p>
+                  <p className="Invisible">.</p>
+                  <p className="Invisible">.</p>
+
+                  <p className="Invisible">.</p>
+
+                  <p className="date">{game.released} pc</p>
+                </div>
+              </li>
             </Link>
           );
         })}
