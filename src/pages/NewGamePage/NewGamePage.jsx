@@ -45,42 +45,61 @@ function NewGamePage() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name"> Game name :</label>
-        <input type="text" id="name" value={name} onChange={handleName} />
-      </div>
-      <div>
-        <label htmlFor="released"> Released date :</label>
-        <input
-          type="text"
-          id="released"
-          value={released}
-          onChange={handleReleased}
-        />
-      </div>
-      <div>
-        <label htmlFor="description"> Game description:</label>
-        <input
-          type="text"
-          id="description"
-          value={description}
-          cols="30"
-          rows="10"
-          onChange={handleDescription}
-        />
-      </div>
-      <div>
-        <label htmlFor="imageUrl"> Image URL :</label>
-        <input
-          type="text"
-          id="imageUrl"
-          value={background_image}
-          onChange={handleBackground_Image}
-        />
-      </div>
-      <button> Create new game</button>
-    </form>
+    <div className="new-game-page">
+      <form onSubmit={handleSubmit} className="form">
+        <h1 className="title"> New Game</h1>
+        <div className="input-container">
+          <label htmlFor="name" className="label">
+            Game name:
+          </label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={handleName}
+            className="input name"
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="released" className="label">
+            Released date:
+          </label>
+          <input
+            type="text"
+            id="released"
+            value={released}
+            onChange={handleReleased}
+            className="input released"
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="description" className="label">
+            Game description:
+          </label>
+          <textarea
+            id="description"
+            value={description}
+            cols="30"
+            rows="10"
+            onChange={handleDescription}
+            className="input description"
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="imageUrl" className="label">
+            Image URL:
+          </label>
+          <input
+            type="text"
+            id="imageUrl"
+            value={background_image}
+            onChange={handleBackground_Image}
+            className="input imageUrl"
+          />
+        </div>
+        <button className="submit-button"> Create new game</button>
+      </form>
+    </div>
   );
 }
 

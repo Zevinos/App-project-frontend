@@ -70,21 +70,25 @@ function OneGamePage() {
   if (!game) return <p>Loading...</p>;
 
   return (
-    <div>
-      <h1>OneGamePage</h1>
-      <img src={game.background_image} alt="" />
-      <h2>{game.name}</h2>
-      <p>{game.description}</p>
+    <div className="one-game-page-container">
+      <div className="form">
+      <img src={game.background_image} alt=""  className="first-image"/>
+      <h1>{game.name}</h1>
+      <div className="game-details">
+ 
+    <p>{game.description}</p>
       <p>{game.released}</p>
-      <p>{isFav ? "Is favorite" : "Not favorite"}</p>
+    <p>{isFav ? "Added to Favorite" : "Add to favorite"}</p>
 
       {isFav ? (
         <HiHeart onClick={handleDeleteFav} />
-      ) : (
-        <HiOutlineHeart onClick={handleSubmit} />
-      )}
+        ) : (
+          <HiOutlineHeart onClick={handleSubmit} />
+          ) }
 
-      <button onClick={handleDelete}>Delete Game</button>
+          </div >
+      <button className="delete-button" onClick={handleDelete}>Delete Game</button>
+      </div>
     </div>
   );
 }

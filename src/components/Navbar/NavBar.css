@@ -1,21 +1,58 @@
-.SearchBar{
+.Bar {
     display: flex;
-    background: whitesmoke;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131A37;
+    padding: 0.5rem 5rem; 
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
-    
-    border-radius: 100%;
-    
-}
-.Bar{
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Logo {
+    height: 5rem; 
+    width: auto;
+    cursor: pointer;
+  }
+  
+  .SearchBar {
     display: flex;
     align-items: center;
-}
-.Logo{
-    width: 60px;
-    height: 60px;
-}
-input {
-    background: transparent;
+    background-color: rgba(26, 65, 212, 1);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 30%; 
+  }
+  
+  .SearchBar input {
+    border: none;
+    background-color: #1A41D4;
+    color: #fff;
+    padding: 0 1rem; 
     outline: none;
-}
+  }
+  
+  .SearchBar svg {
+    color: #fff;
+    margin-right: 1rem; 
+  }
+  
+  .Bar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .Bar a:hover {
+    color: #ccc;
+  }
+  
+  .Bar svg {
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }

@@ -1,4 +1,32 @@
-img {
-  width: 80%;
-  height: 80%;
+.one-game-page-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  background-color:#1E225A ;
+  padding: 20px;
+  border-radius: 20px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-button {
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f04124;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 30%;
+}
+.first-image{
+  max-width: 90%;
 }
