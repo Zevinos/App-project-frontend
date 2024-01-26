@@ -37,11 +37,6 @@ function HomePage() {
                 </div>
                 <div className="RigthCard">
                   <h2>{game.name}</h2>
-                  <p className="Invisible">.</p>
-                  <p className="Invisible">.</p>
-                  <p className="Invisible">.</p>
-
-                  <p className="Invisible">.</p>
 
                   <p className="date">{game.released} PC</p>
                 </div>

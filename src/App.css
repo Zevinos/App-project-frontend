@@ -3,6 +3,7 @@ body {
   background-color: #131a37;
   background-image: url("/BACKGROUND.png");
   font-family: "Rubik Mono One", monospace;
+  font-weight: 100;
 }
 .Navbar {
   margin: 0;

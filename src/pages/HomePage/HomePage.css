@@ -38,12 +38,14 @@ img {
   min-width: 60%;
 }
 .RigthCard {
-  margin-top: 20px;
-  margin-left: 15px;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
-.Invisible {
-  color: #1e225a;
+
+.RigthCard h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .Container {
   display: flex;
