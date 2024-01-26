@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: #131a37;
   background-image: url("/BACKGROUND.png");
+  font-family: "Rubik Mono One", monospace;
 }
 .Navbar {
   margin: 0;
